@@ -17,4 +17,10 @@ release() {
 	gen_js
 }
 
+deploy() {
+	release
+	mkdir -p build/
+	mv dist/ *.css *.html build/
+}
+
 "$@"
