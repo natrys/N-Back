@@ -1,0 +1,170 @@
+body {
+    background-color: Gainsboro;
+}
+
+#outer {
+    display: flex;
+    flex-direction: row;
+}
+
+#toggle {
+    margin-bottom: 10px;
+    font-size: 3em;
+}
+
+.sidebar {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    transition-duration: .3s;
+    margin-left: -30%;
+    margin-right: 0%;
+}
+
+.open {
+    margin-left: 0;
+    transition-duration: 0.3s;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 98vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 100%;
+}
+
+#modeline {
+    text-align: center;
+    margin: 20px;
+}
+
+#square {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-gap: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+#square .box {
+    height: 100px;
+    width: 100px;
+    background: gray;
+    vertical-align: top;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDF;
+    height: 40px;
+    width: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+}
+
+.active, .button:active {
+    color: #ddf;
+    background-color: #333;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+.slidecontainer {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #444;
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+@media (max-width: 568px) {
+    #outer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sidebar {
+        width: auto;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        margin-left: auto;
+        margin-right: auto;
+        transition-duration: 0s;
+    }
+
+    .open {
+        visibility: visible;
+        opacity: 1;
+        height: 20%;
+        display: flex;
+        gap: 10px;
+    }
+
+    #square .box {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    button {
+        display: none;
+    }
+
+    #toggle {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,5 @@
+*** N-Back
+
+Simple [[https://en.wikipedia.org/wiki/N-back][Dual N-Back]] web implementation with colour and position as stimuli.
+
+Built with modern CSS (Grid and Flexbox) and vanilla Javascript with no dependency.
