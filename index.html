@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>N-Back</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
+    <link href="style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="dist/index.js" async></script>
+  </head>
+  <body>
+    <div id="toggle" class="fa fa-bars"></div>
+    <div id="outer">
+      <div class="sidebar">
+        <div class="sidebar-item">
+          <div id="level-show"></div>
+          <div class="slidecontainer">
+            <input type="range" min="2" max="8" value="2"
+                   class="slider" id="level-slider">
+          </div>
+        </div>
+        <div class="level-show">
+          <div>Penalty for wrong guess:</div>
+          <select name="penalty" id="penalty">
+            <option value="1">1</option>
+            <option value="0.5">0.50</option>
+            <option value="0.25">0.25</option>
+            <option value="0">0</option>
+          </select>
+        </div>
+      </div>
+      <div class="container">
+        <h1>N-Back</h1>
+        <div id="square">
+          <div id="box1" class="box"></div>
+          <div id="box2" class="box"></div>
+          <div id="box3" class="box"></div>
+          <div id="box4" class="box"></div>
+          <div id="box5" class="box"></div>
+          <div id="box6" class="box"></div>
+          <div id="box7" class="box"></div>
+          <div id="box8" class="box"></div>
+          <div id="box9" class="box"></div>
+        </div>
+        <button type="button">Start</button>      
+        <div class="buttons">
+          <div id="Pos" class="button">Pos</div>
+          <div id="Col" class="button">Col</div>
+        </div>
+        <div id="modeline"></div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    
+  </footer>
+</html>
