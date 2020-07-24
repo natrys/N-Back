@@ -2,6 +2,8 @@
 
 yarn="yarn --non-interactive -s"
 
+mkdir -p dist/
+
 clean() {
 	rm -rf dist/*
 }
