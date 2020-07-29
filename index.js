@@ -63,12 +63,25 @@ class Game {
         
         // console.log(`Current Score: ${game.score} / ${game.total}`);
     }
+
+    rig_game() {
+        if (this.tick < this.level) {
+            return;
+        }
+
+        let index = this.tick - this.level;
+        let [square_answer, color_answer] = this.history[index];
+
+        if (Math.random() < 0.20) this.square = square_answer;
+        if (Math.random() < 0.20) this.color = color_answer;
+    }
         
     update() {
         this.square_guess = -1;
         this.color_guess = -1;
         this.square = getRandomInt(9) + 1;
         this.color = getRandomInt(this.color_list.length);
+        this.rig_game();
         this.history.push([this.square, this.color]);
     }
 }
