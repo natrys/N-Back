@@ -10,7 +10,7 @@ function getRandomInt(max) {
 
 class Config {
     constructor() {
-        this.level = 2;
+        this.level = 3;
         this.iteration = 20;
         this.penalty = 1;
     }
@@ -28,7 +28,7 @@ class Game {
     clean_slate() {
         this.progress = false;
         this.square = 1;
-        this.level = 2;
+        this.level = 3;
         this.iteration = 20;
         this.tick = 0;
         this.history = [];
