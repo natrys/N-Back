@@ -12,7 +12,7 @@
     "minify": "terser --compress --mangle"
   },
   "devDependencies": {
-    "esbuild": "^0.6.5",
+    "esbuild": "^0.25.0",
     "terser": "^4.8.0"
   }
 }
